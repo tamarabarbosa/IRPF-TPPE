@@ -11,15 +11,30 @@ class TesteCalculosIRPF {
 	@Test
 	void testSomaRendimentos() {
 		double somaRendimentos = calcula.totalRendimentos(c);
-		System.out.println(somaRendimentos);
 		assertEquals(somaRendimentos,1600,0);
 	}
 	
 	@Test
 	void testSomaDeducoes() {
 		double somaDeducoes = calcula.totalDeducoes(c);
-		System.out.println(somaDeducoes);
 		assertEquals(somaDeducoes,390,0);
 	}
+	
+	@Test
+	void testBaseCalculo() {
+		double baseImposto = calcula.baseCalculo(c);
+		assertEquals(baseImposto,1210,0);
+	}
 
+	@Test
+	void testCalculaFaixa() {
+		double valorFaixa = calcula.calculaFaixa(2563.91,1710.79,0.075);
+		assertEquals(valorFaixa,63.98399999999999,0);
+	}
+	
+	@Test
+	void testTotalImposto() throws BaseInvalidaException {
+		double valorImposto = calcula.calculaImposto(c);
+		assertEquals(valorImposto,0,0);
+	}
 }
