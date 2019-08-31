@@ -1,9 +1,9 @@
 
 public class Rendimento {
-	int valor;
+	double valor;
 	String descricao;
 	
-	public Rendimento(int valor, String descricao) {
+	public Rendimento(double valor, String descricao) {
 		this.valor = valor;
 		this.descricao = descricao;
 	}

@@ -17,7 +17,7 @@ class TesteContribuinte {
 	@Test
 	void testeNovoContribuinte() {
 		assertEquals(c.nome,"Tâmara");
-		assertArrayEquals(c.deducoes,this.d);
-		assertArrayEquals(c.rendimentos,this.r);
+		assertArrayEquals(c.deducoes,d);
+		assertArrayEquals(c.rendimentos,r);
 	}
 }
