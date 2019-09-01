@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 class TesteCalculosIRPF {
 	Rendimento[] r = new Rendimento[] {new Rendimento(1200,"salario"),new Rendimento(400,"bolsa")};
-	Deducao[] d = new Deducao[] {new Deducao(190,"dependente"),new Deducao(200,"pensao"),};
+	Deducao[] d = new Deducao[] {new Deducao(190,"dependente"),new Deducao(200,"pensao")};
 	Contribuinte c = Contribuinte.NovoContribuinte("Tâmara",r,d);
 	CalculosIRPF calcula = new CalculosIRPF();
 	
@@ -37,4 +37,5 @@ class TesteCalculosIRPF {
 		double valorImposto = calcula.calculaImposto(c);
 		assertEquals(valorImposto,0,0);
 	}
+	
 }

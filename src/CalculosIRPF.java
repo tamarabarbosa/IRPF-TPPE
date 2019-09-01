@@ -30,7 +30,7 @@ public class CalculosIRPF {
 	}
 
 	public double calculaImposto(Contribuinte contribuinte) throws BaseInvalidaException {
-		double valorImposto = 0;
+		double valorImposto = -1;
 		double base = baseCalculo(contribuinte);
 		
 		if (base <= 1710.78) {
@@ -43,10 +43,12 @@ public class CalculosIRPF {
 			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(base,2563.91,0.15);
 		}
 		else if (base <= 4271.59) {
-			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+calculaFaixa(base,3418.59,0.225);
+			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+
+						   calculaFaixa(base,3418.59,0.225);
 		}
 		else if (base >  4271.59) {
-			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+calculaFaixa(4271.59,3418.59,0.225)+calculaFaixa(base,4271.59,0.27);
+			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+
+					       calculaFaixa(4271.59,3418.59,0.225)+calculaFaixa(base,4271.59,0.27);
 		}
 		else {
 			throw new BaseInvalidaException();
