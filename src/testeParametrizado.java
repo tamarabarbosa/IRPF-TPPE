@@ -29,8 +29,18 @@ public class testeParametrizado{
 			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
 			},
 			
-			{22.4415, 
-			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(1200,"bolsa"),new Rendimento(3000,"salario")},
+			{212.754, 
+			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(1200,"bolsa"),new Rendimento(3500,"salario")},
+			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
+			},
+			
+			{325.254, 
+			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(1100,"bolsa"),new Rendimento(4200,"salario")},
+			new Deducao[] {new Deducao(1100,"pensao"),new Deducao(190,"dependente")})
+			},
+			
+			{853.48245, 
+			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(2200,"bolsa"),new Rendimento(5000,"salario")},
 			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
 			},
 			
@@ -43,7 +53,6 @@ public class testeParametrizado{
 	public void testeComParametros() throws BaseInvalidaException {
 		CalculosIRPF calculo = new CalculosIRPF();
 		double imposto = calculo.calculaImposto(this.c);
-		System.out.println(imposto);
 		assertEquals(this.valorEsperado,imposto,0);
 	}
 
