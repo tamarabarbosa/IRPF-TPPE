@@ -33,7 +33,10 @@ public class CalculosIRPF {
 		double valorImposto = -1;
 		double base = baseCalculo(contribuinte);
 		
-		if (base <= 1710.78) {
+		if (base < 0) {
+			throw new BaseInvalidaException(base);
+		}
+		else if (base <= 1710.78) {
 			valorImposto = 0;
 		}
 		else if (base <= 2563.91) {
@@ -51,7 +54,7 @@ public class CalculosIRPF {
 					       calculaFaixa(4271.59,3418.59,0.225)+calculaFaixa(base,4271.59,0.27);
 		}
 		else {
-			throw new BaseInvalidaException();
+			throw new BaseInvalidaException(base);
 	
 		}
 		
