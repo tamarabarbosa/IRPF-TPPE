@@ -36,22 +36,22 @@ public class CalculosIRPF {
 		if (base < 0) {
 			throw new BaseInvalidaException(base);
 		}
-		else if (base <= 1710.78) {
+		else if (base <= 1903.98) {
 			valorImposto = 0;
 		}
-		else if (base <= 2563.91) {
-			valorImposto = calculaFaixa(base,1710.78,0.075);
+		else if (base <= 2826.65) {
+			valorImposto = calculaFaixa(base,1903.98,0.075);
 		}
-		else if (base <= 3418.59) {
-			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(base,2563.91,0.15);
+		else if (base <= 3751.05) {
+			valorImposto = calculaFaixa(2826.65,1903.98,0.075)+calculaFaixa(base,2826.65,0.15);
 		}
-		else if (base <= 4271.59) {
-			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+
-						   calculaFaixa(base,3418.59,0.225);
+		else if (base <= 4664.68) {
+			valorImposto = calculaFaixa(2826.65,1903.98,0.075)+calculaFaixa(3751.05,2826.65,0.15)+
+						   calculaFaixa(base,3751.05,0.225);
 		}
-		else if (base >  4271.59) {
-			valorImposto = calculaFaixa(2563.91,1710.78,0.075)+calculaFaixa(3418.59,2563.91,0.15)+
-					       calculaFaixa(4271.59,3418.59,0.225)+calculaFaixa(base,4271.59,0.27);
+		else if (base >  4664.68) {
+			valorImposto = calculaFaixa(2826.65,1903.98,0.075)+calculaFaixa(3751.05,2826.65,0.15)+
+					       calculaFaixa(4664.68,3751.05,0.225)+calculaFaixa(base,4664.68,0.27);
 		}
 		else {
 			throw new BaseInvalidaException(base);

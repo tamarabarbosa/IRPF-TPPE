@@ -24,22 +24,22 @@ public class testeParametrizado{
 			new Deducao[] {new Deducao(100,"pensao"),new Deducao(190,"dependente")})
 			},
 			
-			{22.4415, 
+			{7.9514999999999985, 
 			new Contribuinte("Ciclano", new Rendimento[] {new Rendimento(1200,"bolsa"),new Rendimento(2000,"salario")},
 			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
 			},
 			
-			{212.754, 
+			{171.70274999999998, 
 			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(1200,"bolsa"),new Rendimento(3500,"salario")},
 			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
 			},
 			
-			{325.254, 
+			{266.12399999999997, 
 			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(1100,"bolsa"),new Rendimento(4200,"salario")},
 			new Deducao[] {new Deducao(1100,"pensao"),new Deducao(190,"dependente")})
 			},
 			
-			{853.48245, 
+			{776.6633999999999, 
 			new Contribuinte("Beltrano", new Rendimento[] {new Rendimento(2200,"bolsa"),new Rendimento(5000,"salario")},
 			new Deducao[] {new Deducao(1000,"pensao"),new Deducao(190,"dependente")})
 			},
