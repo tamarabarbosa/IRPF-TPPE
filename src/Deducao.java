@@ -1,6 +1,6 @@
 
 public class Deducao {
-	int valor;
+	double valor;
 	String descricao;
 	
 	public Deducao(int valor, String descricao) {
